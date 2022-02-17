@@ -34,7 +34,6 @@ function turn(direction) {
 }
 
 window.onload = function() {
-  // setInterval(() => {
-  //   console.log(getElementUnderMouse());
-  // }, 1000);
+  // We are finding all objects on the page with the "data-interact" property.
+  let interactable = document.querySelectorAll("[data-interact]");
 };
