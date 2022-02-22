@@ -1,5 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+body {
+  color: #9ff;
+  font-size: 2.5rem !important;
+}
+
 .screen {
   background: url("../src/assets/img/office/desk_01.png");
   background-size: contain;
@@ -13,4 +18,9 @@
   left: 32.325%;
   width: calc(750 / 1536 * 100%);
   height: auto;
+}
+
+#output {
+  min-width: 100%;
+  min-height: 5rem;
 }

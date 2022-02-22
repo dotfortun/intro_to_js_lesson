@@ -18,5 +18,12 @@ export default roomData = {
         },
         speak: "The computer seems indifferent to your thoughts.",
       },
+    phone: {
+      look: "Wait, people still use landlines?",
+      take: "That phone definitely doesn't belong to you.",
+      use: "You pick up the handset and talk to the nice dialtone for a while.",
+      speak: "You pick up the handset and talk to the nice dialtone for a while.",
+      },
+    }
   },
 };

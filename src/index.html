@@ -13,6 +13,60 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body class="bg-dark">
-    <div class="container-fluid text-center screen"></div>
+    <div class="container-md gx-5">
+      <div class="row mx-auto">
+        <div id="screen" class="col screen"></div>
+      </div>
+      <div class="row mx-auto my-3">
+        <div class="col d-flex justify-content-center">
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="look"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="look">Look</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="use"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="use">Use</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="take"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="take">Take</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="speak"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="speak">Speak</label>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto my-3">
+        <div class="col">
+          <pre><code id="output">&nbsp;</code></pre>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
