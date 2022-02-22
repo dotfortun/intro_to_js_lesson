@@ -47,13 +47,25 @@ function doAction(target) {
 }
 
 window.onload = function() {
+  document.querySelectorAll(".screen div").forEach(el => {
+    el.classList.add("debug");
+  });
+
   // We are finding all objects on the page with the "data-interact" property.
-  let interactable = Array(document.querySelectorAll("[data-interact]")).map(
-    el => el.id
+  const interactable = Array(document.querySelectorAll("[data-interact]")).map(
+    el => {
+      return el.id;
+    }
   );
+
   console.log(interactable);
-  setInterval(() => {
+
+  window.addEventListener("click", () => {
     let elems = getElementUnderMouse();
-    output(elems);
-  }, 250);
+    let el = elems.pop();
+    output(el);
+    // if (interactable.has(el)) {
+    //   output(el);
+    // }
+  });
 };

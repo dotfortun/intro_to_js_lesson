@@ -1,26 +1,42 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-body {
-  color: #9ff;
-  font-size: 2.5rem !important;
+pre {
+  max-width: 750px;
+  min-height: 5rem;
 }
 
 .screen {
   background: url("../src/assets/img/office/desk_01.png");
   background-size: contain;
-  width: 750px;
+  max-width: 750px;
   height: calc(750 / 1536 * 864px);
 }
 
-.poster {
-  position: relative;
-  top: 21.325%;
-  left: 32.325%;
-  width: calc(750 / 1536 * 100%);
-  height: auto;
+.debug {
+  background-color: #0088ff44;
 }
 
-#output {
-  min-width: 100%;
-  min-height: 5rem;
+#poster {
+  position: relative;
+  top: 27.325%;
+  left: 29.325%;
+  width: calc(750 / 1536 * 25%);
+  height: calc(750 / 1536 * 39%);
+  content: " ";
+  margin: 0;
+}
+
+#monitor {
+  position: relative;
+  top: 20.325%;
+  left: 38.725%;
+  width: calc(750 / 1536 * 49%);
+  height: calc(750 / 1536 * 52%);
+  content: " ";
+  margin: 0;
+}
+
+body {
+  color: #9ff;
+  font-size: 2.5rem !important;
 }
