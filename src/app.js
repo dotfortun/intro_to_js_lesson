@@ -57,11 +57,13 @@ function doAction(target) {
 }
 
 window.onload = function() {
-  // This enables debug mode, which means that you can see the interactable divs.
-  document.querySelectorAll(".screen div").forEach(el => {
-    el.classList.add("debug");
-    el.innerHTML = el.id;
-  });
+  // This enables debug mode if you add ?debug to the url.
+  if (new URLSearchParams(window.location.search).has("debug")) {
+    document.querySelectorAll(".screen div").forEach(el => {
+      el.classList.add("debug");
+      el.innerHTML = el.id;
+    });
+  }
 
   /* Here we're finding all elements that are marked as interactable in the HTML.
    * We then toss the identifiers for those into an array so that we can check against that later.
