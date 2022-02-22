@@ -5,6 +5,12 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+import roomData from "./room.js";
+
+let gameState = {
+  actionHistory: []
+};
+
 function getElementUnderMouse() {
   let elems = [];
   document.querySelectorAll(":hover").forEach(el => {
@@ -35,7 +41,10 @@ function speak(target) {
 
 function doAction(target) {
   let action = document.querySelector(".btn-group :checked").id;
-  console.log(action);
+
+  // We need to implement interact history at Some Point™.
+  console.log("actionHistory:", gameState.actionHistory);
+
   if (action === "look") {
     look(target);
   } else if (action === "take") {
@@ -48,20 +57,27 @@ function doAction(target) {
 }
 
 window.onload = function() {
+  // This enables debug mode, which means that you can see the interactable divs.
   document.querySelectorAll(".screen div").forEach(el => {
     el.classList.add("debug");
+    el.innerHTML = el.id;
   });
 
-  // We are finding all objects on the page with the "data-interact" property.
+  /* Here we're finding all elements that are marked as interactable in the HTML.
+   * We then toss the identifiers for those into an array so that we can check against that later.
+   */
   const interactable = Array.from(
     document.querySelectorAll("[data-interact=true]")
   ).map(el => el.id);
 
-  console.log(interactable);
-
+  /* We add the event listener to the window here.  This handles most of the Magic for this page.
+   */
   window.addEventListener("click", () => {
+    // The following line runs the function getElementsUnderMouse.
     let elems = getElementUnderMouse();
+    // Then we take the last element (the one on top)
     let el = elems.pop();
+    // And if that element is in the array of interactable elements, we doAction to it.
     if (interactable.includes(el)) {
       doAction(el);
     }
