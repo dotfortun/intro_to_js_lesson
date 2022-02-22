@@ -18,23 +18,24 @@ function output(text) {
 }
 
 function look(target) {
-  // Unimplemented
+  output("Look not implemented yet.");
 }
 
 function take(target) {
-  // Unimplemented
+  output("Take not implemented yet.");
 }
 
 function use(target) {
-  // Unimplemented
+  output("Use not implemented yet.");
 }
 
 function speak(target) {
-  // Unimplemented
+  output("Speak not implemented yet.");
 }
 
 function doAction(target) {
-  let action = document.querySelector(".btn-group:checked").id;
+  let action = document.querySelector(".btn-group :checked").id;
+  console.log(action);
   if (action === "look") {
     look(target);
   } else if (action === "take") {
@@ -52,20 +53,17 @@ window.onload = function() {
   });
 
   // We are finding all objects on the page with the "data-interact" property.
-  const interactable = Array(document.querySelectorAll("[data-interact]")).map(
-    el => {
-      return el.id;
-    }
-  );
+  const interactable = Array.from(
+    document.querySelectorAll("[data-interact=true]")
+  ).map(el => el.id);
 
   console.log(interactable);
 
   window.addEventListener("click", () => {
     let elems = getElementUnderMouse();
     let el = elems.pop();
-    output(el);
-    // if (interactable.has(el)) {
-    //   output(el);
-    // }
+    if (interactable.includes(el)) {
+      doAction(el);
+    }
   });
 };
