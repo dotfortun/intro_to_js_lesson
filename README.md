@@ -1,4 +1,5 @@
-# Hello World with Vanilla JS
+# An Adventurous Intro to JavaScript
+#### (built with [4GeeksAcademy/vanillajs-hello](https://github.com/4GeeksAcademy/vanillajs-hello))
 
 Start coding in 30 seconds by opening this template in gitpod:
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/dotfortun/intro_to_js_lesson.git)
@@ -54,7 +55,7 @@ This boilerplate is 100% compatible with the free github pages hosting. Publish 
 $ npm run deploy
 ```
 
-Very easy and in just one step! Push to your **master** branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
+Very easy and in just one step! Push to your **main** branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
 
 # Attributions:
 
